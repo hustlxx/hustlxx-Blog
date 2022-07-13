@@ -1,0 +1,29 @@
+---
+title: My first R blog
+author: Hustlxx
+date: '2022-07-13'
+slug: My-first-R-blog
+categories:
+  - R
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-07-13T11:58:29+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r}
+library(tidyverse)
+head(mtcars)
+
+mtcars %>% ggplot(aes(x=mpg,y=hp)) + 
+  geom_point()+
+  geom_smooth(method="lm") + 
+  theme_classic()
+```
